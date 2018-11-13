@@ -12,10 +12,14 @@ services:
         tty: true
         stdin_open: true
         restart: always
+        volumes:
+            - ~/standalone/db:/data/db
+
 
     service:
         image: standalone
         container_name: standalone
+        build: docker
         networks:
                 docker_session_2:
                         ipv4_address: 192.168.50.20
