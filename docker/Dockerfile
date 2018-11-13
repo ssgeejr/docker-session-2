@@ -8,3 +8,4 @@ WORKDIR /
 ADD . /
 EXPOSE 8080
 CMD ["java", "-jar", "standalone.jar"]
+# HI
